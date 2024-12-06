@@ -1,0 +1,18 @@
+<div class="dashboard">
+  <h1>Dashboard</h1>
+  <app-search-bar (search)="onSearch($event)"></app-search-bar>
+  <div class="stats" *ngIf="dashboardData() as data">
+    <div class="stat-card">
+      <h3>Users</h3>
+      <p>{{ data.stats.users }}</p>
+    </div>
+    <div class="stat-card">
+      <h3>Activities</h3>
+      <p>{{ data.stats.activities }}</p>
+    </div>
+    <div class="stat-card">
+      <h3>Performance</h3>
+      <p>{{ data.stats.performance }}%</p>
+    </div>
+  </div>
+</div>
